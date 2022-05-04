@@ -23,6 +23,13 @@ projects: []
   knitr::opts_chunk$set(eval = FALSE)
 ```
 
+## Install and load R packages in bulk
+```{r}
+  #install.packages(pacman)
+  library(pacman)
+  pacman::p_load()
+```
+
 ## Import data
 - Import various worksheets of excel into Rstudio    
 ```{r}
@@ -30,11 +37,54 @@ projects: []
   purr::map
 ```
 
-
-## Data manuiputation
-- Combine various data frames  
+### Import and merge
+#### By column
 ```{r}
-  do.call("rbind", list(df1, df2, df3, df4))
+  library(tidyverse)
+  df <- list.files("path", pattern = "*.xlsx", full.names = T) %>%
+    lapply(readxl::read_excel)%>%
+    reduce(inner_join, by=c("a","b")) %>%
+    arrange()
+  View(df)
+  colnames(df) <- c("a","b",
+                str_replace(
+                  list.files(
+                    "path", pattern = "*.xlsx"),
+                  ".xlsx",""))
+
+```
+
+#### By row
+- For multiple excel files
+```{r}
+  files <- list.files("path", pattern = "*.xlsx", full.names = T)
+  df1 <- map_dfr(files, readxl::read_excel)
+  View(df1)
+```
+
+- For multiple sheets
+```{r}
+  path <- ".xlsx"
+  df <- map_dfr(excel_sheets(path),
+              ~ read_xlsx(path, sheet = .x))
+```
+
+- For files with different column names
+1. Multiple excel files
+```{r}
+  files <-  list.files("", pattern = ".xlsx", full.names = TRUE)
+  df <- map(files, read_xlsx) %>%
+    reduce(full_join, by = "")
+
+```
+
+2. Multiple sheets
+```{r}
+ files <- "path.xlsx"
+ df <- files %>%
+   excel_sheets() %>%
+   set_names() %>%
+   map(read_excel,path = files)
 ```
 
 ## Export
