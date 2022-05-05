@@ -63,16 +63,16 @@ draft: FALSE
 
 -   For files with different column names
 
-    - Multiple excel files
+    -   Multiple excel files
 
-```{r}
-  files <-  list.files("", pattern = ".xlsx", full.names = TRUE)
-  df <- map(files, read_xlsx) %>%
-    reduce(full_join, by = "")
+    ```{r}
+      files <-  list.files("", pattern = ".xlsx", full.names = TRUE)
+      df <- map(files, read_xlsx) %>%
+        reduce(full_join, by = "")
 
-```
+    ```
 
-    - Multiple sheets
+    -   Multiple sheets
 
 ```{r}
  files <- "path.xlsx"
