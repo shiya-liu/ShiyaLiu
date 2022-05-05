@@ -1,5 +1,5 @@
 ---
-title: Tips and useful functions for RStudio (Updating)
+title: 'Tips and useful functions for RStudio (Updating)'
 author: Shiya Liu
 date: "`r Sys.Date()`"
 slug: tips-and-useful-functions-for-rstudio-updating
@@ -7,16 +7,7 @@ categories:
   - R
 tags:
   - RStudio
-subtitle: ''
-summary: ''
-authors: []
-lastmod: "`r Sys.Date()`"
-featured: no
-image:
-  caption: ''
-  focal_point: ''
-  preview_only: no
-projects: []
+draft: FALSE
 ---
 
 ```{r setup, include=FALSE}
