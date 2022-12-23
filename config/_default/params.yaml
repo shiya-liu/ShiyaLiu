@@ -18,22 +18,7 @@ org_name: ''
 description: ''
 twitter: ''
 
-# Contact (edit or remove options as required)
 
-address:
-  street:
-  city: Athens
-  region: OH
-  postcode: '45701'
-  country: United States
-  country_code: US
-
-contact_links:
-
-  - icon: twitter
-    icon_pack: fab
-    name: DM Me
-    link: 'https://twitter.com/Twitter'
 
 # Site header
 

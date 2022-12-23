@@ -17,7 +17,7 @@ main:
     url: '#featured'
     weight: 40
   - name: CV
-    url: uploads/resume.pdf
+    url: https://shiya-liu.github.io/CV/cv.html
     weight: 50
   - name: Contact
     url: '#contact'

@@ -5,7 +5,7 @@ widget: experience
 
 # This file represents a page section.
 headless: true
-active: false
+active: true
 
 # Order that this section appears on the page.
 weight: 40
@@ -23,29 +23,25 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
+  - title: Research Analyst, Institutional Effectiveness & Analytics
+    company: Ohio University
     company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
+    company_logo: 
+    location: Ohio
+    date_start: "2022-05-01"
     date_end: ''
-    description: |2-
-        Responsibilities include:
+    description:
         
-        * Analysing
-        * Modelling
-        * Deploying
         
-  - title: Professor of Semiconductor Physics
-    company: University X
+  - title: Teaching Assistant
+    company: Ohio University
     company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
-
+    company_logo: 
+    location: Ohio
+    date_start: "2019-08-08"
+    date_end: "2022-05-01"
+    description:
+    
 design:
   columns: '2'
 ---
