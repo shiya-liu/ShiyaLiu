@@ -1,0 +1,55 @@
+---
+title: Several ways to import multiple excel files and sheets into RStudio
+author: Shiya Liu
+date: '2022-12-23'
+slug: several-ways-to-import-multiple-excel-files-into-rstudio
+categories:
+  - R
+tags:
+  - Basic Skills
+subtitle: ''
+summary: ''
+authors: []
+lastmod: '2022-12-23T15:58:31-08:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
+```
+
+```{r include=FALSE}
+library(tidyverse)
+library(readxl)
+```
+
+# Import data
+## Multiple excel files
+1. Use lapply
+```{r}
+df <- list.files(path = "C:/", pattern = "*.xlsx", full.names = T)%>%
+   lapply(readxl::read_excel)
+```
+
+2. Use map_dfr
+
+```{r}
+files <- list.files(path = "C:/", pattern = "*.xlsx", full.names = T)
+df <- map_dfr(files, readxl::read_excel)
+```
+
+
+## Multiple excel sheets in one file
+
+```{r}
+path <- "C:/.xlsx"
+df <- path %>%
+   excel_sheets() %>%
+   set_names() %>%
+   map(read_excel,path = path)
+```
+
