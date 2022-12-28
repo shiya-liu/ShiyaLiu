@@ -27,7 +27,7 @@ education:
   courses:
   - course: PhD in Higher Education and Student Affair
     institution: Ohio University
-    year: 2021
+    year: 
   - course: MA in Economic Policy
     institution: Shanghai University of Finance and Economics
     year: 2019

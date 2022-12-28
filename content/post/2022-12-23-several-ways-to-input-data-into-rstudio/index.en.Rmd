@@ -8,7 +8,7 @@ categories:
 tags:
   - Basic Skills
 subtitle: ''
-summary: ''
+summary: 'Several ways to import multiple excel files and excel sheets'
 authors: []
 lastmod: '2022-12-23T15:58:31-08:00'
 featured: no

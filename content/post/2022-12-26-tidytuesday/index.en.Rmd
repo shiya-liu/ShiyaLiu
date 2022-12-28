@@ -1,5 +1,5 @@
 ---
-title: TidyTuesday
+title: Collegiate sports
 author: Shiya Liu
 date: '2022-12-26'
 slug: tidytuesday
@@ -8,7 +8,7 @@ categories:
 tags:
   - R
 subtitle: ''
-summary: ''
+summary: 'The data comes from Equity in Athletics Data Analysis'
 authors: []
 lastmod: '2022-12-26T21:01:04-08:00'
 featured: no
@@ -18,3 +18,114 @@ image:
   preview_only: no
 projects: []
 ---
+![](plot_logo.png)
+
+
+# Description
+
+The data comes from Equity in [Athletics Data Analysis](https://ope.ed.gov/athletics/#/datafile/list), hattip to [Data is Plural](https://www.data-is-plural.com/archive/2020-1).
+
+An additional article can be found at [USA Facts](https://usafacts.org/articles/coronavirus-college-football-profit-sec-acc-pac-12-big-ten-millions-fall-2020/).
+
+Additional articles from [US News](https://www.usnews.com/news/sports/articles/2021-10-26/second-ncaa-gender-equity-report-shows-spending-disparities#:~:text=The%20NCAA%20spent%20%244%2C285%20per,championships%20than%20for%20the%20women's.) and [NPR](https://www.npr.org/2021/10/27/1049530975/ncaa-spends-more-on-mens-sports-report-reveals).
+
+
+## Data and variables
+
+|variable            |class     |description |
+|:-------------------|:---------|:-----------|
+|year                |integer   | year, which is year: year + 1, eg 2015 is 2015 to 2016|
+|unitid              |double    | School ID|
+|institution_name    |character | School name|
+|city_txt            |character | City name|
+|state_cd            |character | State abbreviation|
+|zip_text            |character | Zip of school|
+|classification_code |double    | Code for school classification|
+|classification_name |character | School classification|
+|ef_male_count       |double    | Total male student|
+|ef_female_count     |double    | Total female student|
+|ef_total_count      |double    | Total student for binary male/female gender (sum of previous two cols)|
+|sector_cd           |double    | Sector code|
+|sportscode          |double    | Sport code|
+|partic_men          |double    | Participation men|
+|partic_women        |double    | Participation women|
+|sum_partic_men      |double    | Sum of participation men|
+|sum_partic_women    |double    | Sum of participation women|
+|rev_men             |double    | Revenue in USD for men|
+|rev_women           |double    | Revenue in USD for women|
+|total_rev_menwomen  |double    | Total revenue for both|
+|exp_men             |double    | Expenditures in USD for men|
+|exp_women           |double    | Expenditures in USD for women|
+|total_exp_menwomen  |double    | Total expenditure for both|
+|sports              |character | Sport name|
+
+
+
+
+
+
+## Set up
+```{r include=FALSE}
+ls()
+rm(list=ls())
+load("D:/R/data analysis/Personal website/ShiyaLiu/content/post/2022-12-26-tidytuesday/sport_221227_1911_data.RData")
+```
+
+```{r message=FALSE, warning=FALSE, eval=FALSE}
+library(pacman)
+p_load(tidyverse, ggplot2,kableExtra)
+```
+
+## Load data
+```{r, eval = FALSE}
+tuesdata <- tidytuesdayR::tt_load('2022-03-29')
+df <- tuesdata$sports
+```
+
+```{r , collapse=TRUE}
+dim(df)
+unique(df$year)
+```
+132,327 observations on 28 variables, range from 2015 to 2019.
+
+# Questions
+Focus will be on two issues: equity and finance. 
+
+1.Equity issues
+
+Considering types of institutions and sports
+
+1.1. Whether institutions spending equity on men and women
+
+1.2. Whether men and women bring equal revenues to institutions
+
+2. Finance issues
+
+Considering types of institutions and sports
+
+
+# Analysis
+
+## Equity issues
+
+### Expenditures
+
+### Revenues
+
+## Finance issues
+
+### All
+
+### Different sports
+
+### Different institutions
+
+
+```{r include=FALSE}
+fileName <- "sport"
+dt2 <- format(Sys.time(),"%y%m%d_%H%M")
+fileName2 <- paste0(fileName, "_", dt2, "_data")
+fileName2
+save.image(paste0(fileName2,".RData"))
+```
+

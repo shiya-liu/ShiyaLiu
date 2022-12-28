@@ -1,5 +1,5 @@
 ---
-title: TidyTuesday
+title: Collegiate sports
 author: Shiya Liu
 date: '2022-12-26'
 slug: tidytuesday
@@ -8,7 +8,7 @@ categories:
 tags:
   - R
 subtitle: ''
-summary: ''
+summary: 'The data comes from Equity in Athletics Data Analysis'
 authors: []
 lastmod: '2022-12-26T21:01:04-08:00'
 featured: no
@@ -21,3 +21,200 @@ projects: []
 
 
 
+<p><img src="plot_logo.png" /></p>
+<div id="description" class="section level1">
+<h1>Description</h1>
+<p>The data comes from Equity in <a href="https://ope.ed.gov/athletics/#/datafile/list">Athletics Data Analysis</a>, hattip to <a href="https://www.data-is-plural.com/archive/2020-1">Data is Plural</a>.</p>
+<p>An additional article can be found at <a href="https://usafacts.org/articles/coronavirus-college-football-profit-sec-acc-pac-12-big-ten-millions-fall-2020/">USA Facts</a>.</p>
+<p>Additional articles from <a href="https://www.usnews.com/news/sports/articles/2021-10-26/second-ncaa-gender-equity-report-shows-spending-disparities#:~:text=The%20NCAA%20spent%20%244%2C285%20per,championships%20than%20for%20the%20women&#39;s.">US News</a> and <a href="https://www.npr.org/2021/10/27/1049530975/ncaa-spends-more-on-mens-sports-report-reveals">NPR</a>.</p>
+<div id="data-and-variables" class="section level2">
+<h2>Data and variables</h2>
+<table style="width:100%;">
+<colgroup>
+<col width="47%" />
+<col width="23%" />
+<col width="28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">variable</th>
+<th align="left">class</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">year</td>
+<td align="left">integer</td>
+<td align="left">year, which is year: year + 1, eg 2015 is 2015 to 2016</td>
+</tr>
+<tr class="even">
+<td align="left">unitid</td>
+<td align="left">double</td>
+<td align="left">School ID</td>
+</tr>
+<tr class="odd">
+<td align="left">institution_name</td>
+<td align="left">character</td>
+<td align="left">School name</td>
+</tr>
+<tr class="even">
+<td align="left">city_txt</td>
+<td align="left">character</td>
+<td align="left">City name</td>
+</tr>
+<tr class="odd">
+<td align="left">state_cd</td>
+<td align="left">character</td>
+<td align="left">State abbreviation</td>
+</tr>
+<tr class="even">
+<td align="left">zip_text</td>
+<td align="left">character</td>
+<td align="left">Zip of school</td>
+</tr>
+<tr class="odd">
+<td align="left">classification_code</td>
+<td align="left">double</td>
+<td align="left">Code for school classification</td>
+</tr>
+<tr class="even">
+<td align="left">classification_name</td>
+<td align="left">character</td>
+<td align="left">School classification</td>
+</tr>
+<tr class="odd">
+<td align="left">ef_male_count</td>
+<td align="left">double</td>
+<td align="left">Total male student</td>
+</tr>
+<tr class="even">
+<td align="left">ef_female_count</td>
+<td align="left">double</td>
+<td align="left">Total female student</td>
+</tr>
+<tr class="odd">
+<td align="left">ef_total_count</td>
+<td align="left">double</td>
+<td align="left">Total student for binary male/female gender (sum of previous two cols)</td>
+</tr>
+<tr class="even">
+<td align="left">sector_cd</td>
+<td align="left">double</td>
+<td align="left">Sector code</td>
+</tr>
+<tr class="odd">
+<td align="left">sportscode</td>
+<td align="left">double</td>
+<td align="left">Sport code</td>
+</tr>
+<tr class="even">
+<td align="left">partic_men</td>
+<td align="left">double</td>
+<td align="left">Participation men</td>
+</tr>
+<tr class="odd">
+<td align="left">partic_women</td>
+<td align="left">double</td>
+<td align="left">Participation women</td>
+</tr>
+<tr class="even">
+<td align="left">sum_partic_men</td>
+<td align="left">double</td>
+<td align="left">Sum of participation men</td>
+</tr>
+<tr class="odd">
+<td align="left">sum_partic_women</td>
+<td align="left">double</td>
+<td align="left">Sum of participation women</td>
+</tr>
+<tr class="even">
+<td align="left">rev_men</td>
+<td align="left">double</td>
+<td align="left">Revenue in USD for men</td>
+</tr>
+<tr class="odd">
+<td align="left">rev_women</td>
+<td align="left">double</td>
+<td align="left">Revenue in USD for women</td>
+</tr>
+<tr class="even">
+<td align="left">total_rev_menwomen</td>
+<td align="left">double</td>
+<td align="left">Total revenue for both</td>
+</tr>
+<tr class="odd">
+<td align="left">exp_men</td>
+<td align="left">double</td>
+<td align="left">Expenditures in USD for men</td>
+</tr>
+<tr class="even">
+<td align="left">exp_women</td>
+<td align="left">double</td>
+<td align="left">Expenditures in USD for women</td>
+</tr>
+<tr class="odd">
+<td align="left">total_exp_menwomen</td>
+<td align="left">double</td>
+<td align="left">Total expenditure for both</td>
+</tr>
+<tr class="even">
+<td align="left">sports</td>
+<td align="left">character</td>
+<td align="left">Sport name</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="set-up" class="section level2">
+<h2>Set up</h2>
+<pre class="r"><code>library(pacman)
+p_load(tidyverse, ggplot2,kableExtra)</code></pre>
+</div>
+<div id="load-data" class="section level2">
+<h2>Load data</h2>
+<pre class="r"><code>tuesdata &lt;- tidytuesdayR::tt_load(&#39;2022-03-29&#39;)
+df &lt;- tuesdata$sports</code></pre>
+<pre class="r"><code>dim(df)
+## [1] 132327     28
+unique(df$year)
+## [1] 2015 2016 2017 2018 2019</code></pre>
+<p>132,327 observations on 28 variables, range from 2015 to 2019.</p>
+</div>
+</div>
+<div id="questions" class="section level1">
+<h1>Questions</h1>
+<p>Focus will be on two issues: equity and finance.</p>
+<p>1.Equity issues</p>
+<p>Considering types of institutions and sports</p>
+<p>1.1. Whether institutions spending equity on men and women</p>
+<p>1.2. Whether men and women bring equal revenues to institutions</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Finance issues</li>
+</ol>
+<p>Considering types of institutions and sports</p>
+</div>
+<div id="analysis" class="section level1">
+<h1>Analysis</h1>
+<div id="equity-issues" class="section level2">
+<h2>Equity issues</h2>
+<div id="expenditures" class="section level3">
+<h3>Expenditures</h3>
+</div>
+<div id="revenues" class="section level3">
+<h3>Revenues</h3>
+</div>
+</div>
+<div id="finance-issues" class="section level2">
+<h2>Finance issues</h2>
+<div id="all" class="section level3">
+<h3>All</h3>
+</div>
+<div id="different-sports" class="section level3">
+<h3>Different sports</h3>
+</div>
+<div id="different-institutions" class="section level3">
+<h3>Different institutions</h3>
+</div>
+</div>
+</div>
