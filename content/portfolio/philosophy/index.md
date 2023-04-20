@@ -1,4 +1,0 @@
----
-title: "Professional Philosophy" 
-data: ""
----

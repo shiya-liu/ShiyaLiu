@@ -1,24 +1,24 @@
 ---
 # Page title
 title: Competence Assessment
-
-# Title for the menu link if you wish to use a shorter link title, otherwise remove this option.
-linktitle: 
-
-# Page summary for search engines.
-summary: Nine ACPA/NASPA Competencies
-
-# Date page published
-date: 
+summary: Self-assessment of Nine ACPA/NASPA Competencies
 
 # Book page type (do not modify).
 type: book
 
-# Position of this page in the menu. Remove this option to sort alphabetically.
-weight: 1
-
-
-headless: true
+weight: 20
 ---
 
+{{< toc hide_on="xl" >}}
 
+Check my **Competence Assessment** Below
+
+# Overall
+
+{{< table "table table-striped" >}}
+| Competencies       | Level         | 
+| ------------------ |:-------------:| 
+| <ul><li>item1</li><li>item2</li></ul>| Exemplary |
+| <ul><li>item1</li><li>item2</li></ul>| Proficient |
+| <ul><li>item1</li><li>item2</li></ul>| Foundational |
+{{< /table >}}
