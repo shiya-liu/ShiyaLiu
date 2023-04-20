@@ -45,19 +45,19 @@ You can make your choice based on your needs. I will take public, four-year inst
 
 I will choose 2018- 2021 with variables: "percent admitted -total", "Percent of full-time first-time undergraduates awarded Pell grants", and "Graduation rate, total cohort".
 
-Congratulations! Now you can download your data files!
+🌻 Congratulations! Now you can download your data files!
 
 5.  Download the data files.
 
-    To have the data files that are easy to manipulate and import to R, choose "**csv**".
+To have the data files that are easy to manipulate and import to R, choose "**csv**".
 
-    If you can download files as a whole, you might want do that instead of download a single file.
+If you can download files as a whole, you might want do that instead of download a single file.
 
-    ![](images/IPEDS4.jpg)
+![](images/IPEDS4.jpg)
 
-    With those data files, we need to extract them before importing them into R.
+With those data files, we need to extract them before importing them into R.
 
-### Tips
+### 👉 Tips
 
 1.  Make sure that you check and understand the variables' [definitions](https://surveys.nces.ed.gov/ipeds/public/glossary) before you use them.
 2.  Make sure that you explore all relevant variables that you want. Some variables have similar names but different definitions.
