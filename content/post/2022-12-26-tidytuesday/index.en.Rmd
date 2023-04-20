@@ -25,7 +25,7 @@ draft: true
 
 # Description
 
-The data comes from Equity in [Athletics Data Analysis](https://ope.ed.gov/athletics/#/datafile/list), http to [Data is Plural](https://www.data-is-plural.com/archive/2020-1).
+The data comes from Equity in [Athletics Data Analysis](https://ope.ed.gov/athletics/#/datafile/list), hattip to [Data is Plural](https://www.data-is-plural.com/archive/2020-1).
 
 An additional article can be found at [USA Facts](https://usafacts.org/articles/coronavirus-college-football-profit-sec-acc-pac-12-big-ten-millions-fall-2020/).
 
