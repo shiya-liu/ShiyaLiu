@@ -37,7 +37,7 @@ This instruction is for people who wish to download annual data from IPEDS and m
 
 3.  To customize the data files, choose groups of institutions.
 
-You can make your choice based on your needs. I will take public, four-year institutions as an example, click "\*\*By Groups\*\*", then choose "\*\*Sector\*\*" \--\\\> "Public, 4-year or above". Then, click "\*\*Search\*\*" \--\\\> "\*\*CONTINUE\*\*" to step 2.
+You can make your choice based on your needs. I will take public, four-year institutions as an example, click "**By Groups**", then choose "**Sector**" -\> "Public, 4-year or above". Then, click "Search" -\> "**CONTINUE**" to step 2.
 
 ![](images/IPEDS3.jpg)
 
