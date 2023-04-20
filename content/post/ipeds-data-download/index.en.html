@@ -1,0 +1,60 @@
+---
+title: IPEDS data download
+author: Shiya Liu
+date: '2023-04-19'
+slug: ipeds-data-download
+categories:
+  - IPEDS
+  - R
+tags:
+  - IPEDS
+  - R
+subtitle: ''
+summary: 'IPEDS data download'
+authors: []
+lastmod: '2023-04-19T21:06:26-07:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+
+
+<p><strong><em>Note</em></strong>:</p>
+<p>This instruction is for people who wish to download annual data from IPEDS and manipulate it in R or RStudio.</p>
+<div id="steps" class="section level3">
+<h3>Steps</h3>
+<ol style="list-style-type: decimal">
+<li>To download IPEDS, we first need to open the <a href="https://nces.ed.gov/ipeds/use-the-data">[IPEDS](%5Bhttps://nces.ed.gov/ipeds/use-the-data)</a>) website.</li>
+</ol>
+<p><img src="images/IPEDS1.jpg" /></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>IPEDS website provides multiple options for us to explore. To download data we need, we need to go to “<strong>Survey Data</strong>” and choose “<strong>Custom data files</strong>”. <img src="images/IPEDS2.jpg" /></p></li>
+<li><p>To customize the data files, choose <strong>groups</strong> of institutions.</p></li>
+</ol>
+<p>You can make your choice based on your needs. I will take public, four-year institutions as an example, click “<strong>By Groups</strong>”, then choose “<strong>Sector</strong>” –&gt; “Public, 4-year or above”. Then, click “<strong>Search</strong>” –&gt; “<strong>CONTINUE</strong>” to step 2.</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Choose years and variables we want.</li>
+</ol>
+<p>I will choose 2018- 2021 with variables: “percent admitted -total”, “Percent of full-time first-time undergraduates awarded Pell grants”, and “Graduation rate, total cohort”.</p>
+<p>🌻 Congratulations! Now you can download your data files!</p>
+<ol start="5" style="list-style-type: decimal">
+<li>Download the data files.</li>
+</ol>
+<p>To have the data files that are easy to manipulate and import to R, choose “<strong>csv</strong>”.</p>
+<p>If you can download files as a whole, you might want do that instead of download a single file.</p>
+<p><img src="images/IPEDS4.jpg" /></p>
+<p>👉 With those data files, we need to extract them before importing them into R.</p>
+</div>
+<div id="tips" class="section level3">
+<h3>Tips</h3>
+<ol style="list-style-type: decimal">
+<li><p>Make sure that you check and understand the variables’ definitions before you use them.</p></li>
+<li><p>Make sure that you explore all relevant variables that you want. Some variables have similar names but different definitions.</p></li>
+<li><p>Make sure that you download data files year by year since variables’ definition might change.</p></li>
+<li><p>Explore Frequently used/ Derived variables first. It include variables that might not be in the general classification. Sometimes, it saves your time.</p></li>
+</ol>
+</div>
