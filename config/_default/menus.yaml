@@ -13,15 +13,12 @@ main:
   - name: Talks
     url: '#talks'
     weight: 30
-  - name: Publications
-    url: '#publications'
-    weight: 40
   - name: CV
     url: https://shiya-liu.github.io/CV/cv.html
-    weight: 50
+    weight: 40
   - name: Portfolio
     identifier: portfolio
-    weight: 60
+    weight: 50
   - name: Professional Philosophy
     parent: portfolio
     url: portfolio/philosophy
@@ -36,4 +33,4 @@ main:
     weight: 30
   - name: Contact
     url: '#contact'
-    weight: 70
+    weight: 60
