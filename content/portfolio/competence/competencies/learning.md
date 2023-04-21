@@ -16,13 +16,23 @@ weight: 30
 
 headless: true
 ---
-### Level
+### Proficient level
 
 
 ### Description
 "The Student Learning and Development competency area addresses the concepts and principles of student development and learning theory. This includes the ability to apply theory to improve and inform student affairs and teaching practice" (p.32).
 
-### 
+### Artifact
+
+{{< gdocs src="https://docs.google.com/presentation/d/1zUd4-JWsT0h9L09IujpSC250T7ulVQIC/edit?usp=sharing&ouid=101387663891465878388&rtpof=true&sd=true" >}}
+
+{{< gdocs src="https://docs.google.com/document/d/1jSZSCrCHQZjlXglVQDpwwYCKtDaPvrdguJhL8w7S4BM/edit?usp=sharing" >}}
+
+{{<embed-pdf src="uploads/history.pdf">}}
+
+
+
+
 
 
 ### References

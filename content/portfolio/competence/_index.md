@@ -18,7 +18,7 @@ Check my **Competence Assessment** Below
 {{< table "table table-striped" >}}
 | Competencies       | Level         | 
 | ------------------ |:-------------:| 
-| <ul><li>item1</li><li>item2</li></ul>| Exemplary |
-| <ul><li>item1</li><li>item2</li></ul>| Proficient |
-| <ul><li>item1</li><li>item2</li></ul>| Foundational |
+| <ul><li>Value, Philsopohy, and Hisotry</li><li>Technology</li><li>Assessment, Evaluation, and Research</li></ul>| Exemplary |
+| <ul><li>Student Learning and Development</li><li>Law, Policy, and Governance</li><li>Organizational and Human Resources</li></ul>| Proficient |
+| <ul><li>Social Justice and Development</li></ul>| Foundational |
 {{< /table >}}
