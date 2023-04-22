@@ -6,11 +6,11 @@ weight: 20
 
 {{< figure src="technology.jpg">}}
 
-### Exemplary level
+### Exemplary Level
 
 ### Description
 
-"The Technology competency area focuses on the use of digital tools, resources, and technologies for the advancement of student learning, development, and success as well as the improved performance of student affairs professionals" (p.33).
+> "The Technology competency area focuses on the use of digital tools, resources, and technologies for the advancement of student learning, development, and success as well as the improved performance of student affairs professionals" (p.33).
 
 ### Artifact
 

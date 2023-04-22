@@ -14,15 +14,19 @@ type: book
 weight: 70
 
 headless: true
+
+
 ---
-### Level
+### Proficient Level
 
 
 ### Description
-"The Law, Policy, and Governance competency area includes the knowledge, skills, and dispositions relating to policy development processes used in various contexts, the application of legal constructs, compliance/policy issues, and the understanding of governance structures and their impact on one’s professional practice" (p.22).
+>"The Law, Policy, and Governance competency area includes the knowledge, skills, and dispositions relating to policy development processes used in various contexts, the application of legal constructs, compliance/policy issues, and the understanding of governance structures and their impact on one’s professional practice" (p.22).
 
-### 
-
+### Artifact
+{{< embed-pdf url= "/uploads/law1.pdf" hidePaginator="true">}}
+{{< embed-pdf url= "/uploads/law2.pdf" hidePaginator="true">}}
+{{< embed-pdf url= "/uploads/policy1.pdf" hidePaginator="true">}}
 
 ### References
 ACPA: College Student Educators International & NASPA − Student Affairs Administrators in Higher Education (2015). *ACPA/NASPA professional competency areas for student affairs practitioners.* Washington, DC: Authors.

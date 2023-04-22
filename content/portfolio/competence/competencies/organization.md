@@ -16,14 +16,14 @@ weight: 50
 
 headless: true
 ---
-
-### Level
+### Proficient Level
 
 
 ### Description
-"The Organizational and Human Resources competency area includes knowledge, skills, and dispositions used in the management of institutional human capital, financial, and physical resources" (p.24).
+>"The Organizational and Human Resources competency area includes knowledge, skills, and dispositions used in the management of institutional human capital, financial, and physical resources" (p.24).
 
-### 
+### Artifact
+{{< embed-pdf url= "/uploads/org.pdf" hidePaginator="true">}}
 
 
 ### References
