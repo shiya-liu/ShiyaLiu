@@ -29,7 +29,7 @@ experience:
     company_logo: 
     location: Ohio
     date_start: "2022-05-01"
-    date_end: 'Present'
+    date_end: ''
     description:
         
         
