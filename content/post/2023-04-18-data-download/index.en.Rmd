@@ -1,5 +1,5 @@
 ---
-title: Data download
+title: IPEDS Data download
 author: Shiya Liu
 date: '2023-04-18'
 slug: data-download
@@ -9,7 +9,6 @@ categories:
 tags:
   - IPEDS
   - R
-subtitle: ''
 subtitle: ''
 summary: 'IPEDS data download'
 authors: []
