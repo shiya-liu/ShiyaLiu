@@ -14,6 +14,7 @@ summary: 'IPEDS data download'
 authors: []
 lastmod: '2023-04-18T22:32:01-07:00'
 featured: no
+draft: false
 image:
   caption: ''
   focal_point: ''
