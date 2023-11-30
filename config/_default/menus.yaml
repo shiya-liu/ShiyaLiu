@@ -16,22 +16,7 @@ main:
   - name: CV
     url: https://shiya-liu.github.io/CV/cv.html
     weight: 40
-  - name: Portfolio
-    identifier: portfolio
-    weight: 50
-  - name: Professional Philosophy
-    parent: portfolio
-    url: portfolio/philosophy
-    weight: 10
-  - name: Competence Assessment
-    parent: portfolio
-    url: portfolio/competence/
-    weight: 20
-  - name: Diversity Statements
-    parent: portfolio
-    url: portfolio/diversity
-    weight: 30
   - name: Contact
     url: '#contact'
-    weight: 60
+    weight: 50
 

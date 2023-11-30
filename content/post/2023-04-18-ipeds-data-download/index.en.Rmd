@@ -29,11 +29,11 @@ This instruction is for people who wish to download annual data from IPEDS and m
 
 1.  To download IPEDS, we first need to open the [IPEDS](https://nces.ed.gov/ipeds/use-the-data) website.
 
-![](images/IPEDS1.jpg)
+![](images/IPEDS1.png)
 
 2.  IPEDS website provides multiple options for us to explore. To download data we need, we need to go to "**Survey Data**" and choose "**Custom data files**".
 
-![](images/IPEDS2.jpg)
+![](images/IPEDS2.png)
 
 3.  To customize the data files, choose groups of institutions.
 
