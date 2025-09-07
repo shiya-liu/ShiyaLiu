@@ -385,4 +385,102 @@ main #TOC {
 }
 
 
+// Matteo-style TOC from shortcode
+.matteo-toc {
+    position: fixed !important;
+    top: 120px !important;
+    right: 30px !important;
+    width: 280px !important;
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    z-index: 1000 !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+
+    // Style the navigation list
+    nav ul,
+    ul {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        // Nested lists (subsections)
+        ul {
+            margin-left: 15px !important;
+            margin-top: 6px !important;
+            font-size: 13px !important;
+
+            a {
+                color: #6c757d !important;
+            }
+
+            // Third level nesting
+            ul {
+                margin-left: 30px !important;
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    li {
+        margin: 6px 0 !important;
+        padding: 0 !important;
+    }
+
+    a {
+        color: #34495e !important;
+        text-decoration: none !important;
+        padding: 6px 0 !important;
+        display: block !important;
+        transition: color 0.2s ease !important;
+        border: none !important;
+        background: transparent !important;
+        font-weight: 400 !important;
+
+        &:hover {
+            color: #284f7a !important;
+            font-weight: 500 !important;
+        }
+
+        &:focus {
+            outline: none !important;
+            color: #284f7a !important;
+        }
+    }
+
+    // Hide on smaller screens
+    @media (max-width: 1200px) {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto 30px auto !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+
+    @media (max-width: 768px) {
+        margin-bottom: 20px !important;
+        padding: 15px !important;
+        font-size: 13px !important;
+    }
+
+    @media (max-width: 576px) {
+        display: none !important;
+    }
+}
+
+// Add smooth scrolling
+.matteo-toc a {
+    scroll-behavior: smooth;
+}
+
 

@@ -21,10 +21,11 @@ image:
 projects: []
 output:
   blogdown::html_page:
-    toc: true
+    toc: false
     toc_depth: 3
 ---
 
+{{< toc >}}
 
 
 
