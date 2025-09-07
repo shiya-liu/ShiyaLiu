@@ -5,26 +5,36 @@ date: '2025-09-07'
 slug: ipeds-data-wrangling
 categories:
   - IPEDS
-  - R
 tags:
   - IPEDS
   - R
 subtitle: ''
-summary: 'IPEDS data wrangling'
+summary: 'IPEDS Data Wrangling'
 authors: []
-featured: false
-active: true
+lastmod: '2025-09-07T15:45:43-04:00'
+featured: no
+draft: no
 image:
   caption: ''
   focal_point: ''
   preview_only: no
 projects: []
+toc: true
+toc_depth: 3
+toc_float: true
+show_toc: true
+markup: 
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
 ---
+
+
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
 ```
 
-# Import multiple files into R
+## Import multiple files into R
 ```{r}
 df <- list.files("file_path", pattern = "*.csv",
                  full.names = T) |>
@@ -32,8 +42,8 @@ df <- list.files("file_path", pattern = "*.csv",
 ```
 
 
-# Clean variable names
-## Drop certain patterns in variable names
+## Clean variable names
+### Drop certain patterns in variable names
 + For example, drop "F1617_F1A_RV." in front of "F1617_F1A_RV.State appropriations"
 ```{r}
 replacements <- c(" - " = "_",
@@ -58,10 +68,11 @@ for (i in 1:7) {
 } 
 ```
 
-# Join all data into one dataframe
+## Join all data into one dataframe
 ```{r}
 df <- df |>
   reduce(full_join)
 
 ```
+
 

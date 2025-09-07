@@ -21,9 +21,12 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+toc: true
+toc_float: true
+toc_depth: 3
 ---
 
-*Note*:
+*Note* : 
 
 This instruction is for people who wish to download annual data from IPEDS and manipulate it in R or RStudio.
 

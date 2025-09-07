@@ -1,0 +1,78 @@
+---
+title: IPEDS Data Wrangling
+author: Shiya Liu
+date: '2025-09-07'
+slug: ipeds-data-wrangling
+categories:
+  - IPEDS
+tags:
+  - IPEDS
+  - R
+subtitle: ''
+summary: 'IPEDS Data Wrangling'
+authors: []
+lastmod: '2025-09-07T15:45:43-04:00'
+featured: no
+draft: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+toc: true
+toc_depth: 3
+toc_float: true
+show_toc: true
+markup: 
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+---
+
+
+
+
+## Import multiple files into R
+
+``` r
+df <- list.files("file_path", pattern = "*.csv",
+                 full.names = T) |>
+  lapply(read_csv)
+```
+
+
+## Clean variable names
+### Drop certain patterns in variable names
++ For example, drop "F1617_F1A_RV." in front of "F1617_F1A_RV.State appropriations"
+
+``` r
+replacements <- c(" - " = "_",
+                  " " = "_",
+                  "-" = "_",
+                  "/" = "_",
+                  "," = "")
+for (i in 1:7) {
+  df[[i]] <- df[[i]] |>
+    setNames(gsub(
+      pattern = ".*F1A.|.*RV.|.*[0-9]\\.|,.*|:.*",
+      replacement = "",
+      x = names(df[[i]])
+      )
+      ) |>
+    rename_all(~ str_replace_all(.x, replacements)) |>
+    rename_with(~ str_remove(., "_\\d{4}(_\\d{2})?$")) |> # remove certain number at the end of variable names
+    janitor::clean_names() |> # create clean name automatically, e.g., to lower case, replace space with "_"
+    rename(
+      new_name = old_name
+    ) 
+} 
+```
+
+## Join all data into one dataframe
+
+``` r
+df <- df |>
+  reduce(full_join)
+```
+
+

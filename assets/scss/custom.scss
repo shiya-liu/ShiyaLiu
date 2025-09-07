@@ -1,217 +1,117 @@
-/* custom.css - Place this file in static/css/custom.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+/* Exact font styling from Matteo Courthoud's website */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&family=Roboto+Mono:wght@400;500;700&display=swap');
 
-/* Global font family override */
-html, body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif !important;
-}
-
-/* Article content styling */
+/* Change font family to Source Sans Pro (as used on Matteo's site) */
+html, body,
 .article-container,
 .docs-article-container,
 .page-body,
-.post-content,
-.content {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif !important;
-    font-size: 18px !important;
-    line-height: 1.7 !important;
-    color: #333333 !important;
-    font-weight: 400 !important;
-}
-
-/* Headings */
 h1, h2, h3, h4, h5, h6,
 .article-title,
-.page-title {
-    font-family: 'Inter', sans-serif !important;
-    color: #1a1a1a !important;
+.navbar,
+.nav-link,
+.btn,
+.site-footer {
+    font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
-h1, .article-title, .page-title {
-    font-size: 2.5rem !important;
-    font-weight: 700 !important;
+/* Body text font size - 16px (Matteo's actual size) */
+.article-container,
+.docs-article-container,
+.page-body,
+p {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+}
+
+/* Heading font sizes - matching Matteo's site */
+h1, .article-title {
+    font-size: 2.25rem !important;
+    font-weight: 600 !important;
     line-height: 1.2 !important;
-    margin: 2rem 0 1rem 0 !important;
 }
 
 h2 {
-    font-size: 2rem !important;
+    font-size: 1.75rem !important;
     font-weight: 600 !important;
     line-height: 1.3 !important;
-    margin: 1.8rem 0 0.8rem 0 !important;
 }
 
 h3 {
-    font-size: 1.5rem !important;
+    font-size: 1.375rem !important;
     font-weight: 600 !important;
     line-height: 1.4 !important;
-    margin: 1.5rem 0 0.5rem 0 !important;
 }
 
 h4 {
-    font-size: 1.25rem !important;
-    font-weight: 500 !important;
+    font-size: 1.125rem !important;
+    font-weight: 600 !important;
     line-height: 1.4 !important;
-    margin: 1.2rem 0 0.5rem 0 !important;
 }
 
 h5 {
-    font-size: 1.1rem !important;
-    font-weight: 500 !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
     line-height: 1.4 !important;
-    margin: 1rem 0 0.5rem 0 !important;
 }
 
 h6 {
-    font-size: 1rem !important;
-    font-weight: 500 !important;
-    line-height: 1.4 !important;
-    margin: 1rem 0 0.5rem 0 !important;
-}
-
-/* Paragraphs */
-p {
-    font-size: 18px !important;
-    line-height: 1.7 !important;
-    margin: 1rem 0 !important;
-    color: #333333 !important;
-    font-weight: 400 !important;
-}
-
-/* Code styling */
-code {
-    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace !important;
-    font-size: 16px !important;
-    background-color: #f5f5f5 !important;
-    padding: 2px 6px !important;
-    border-radius: 4px !important;
-    color: #d73a49 !important;
-}
-
-pre {
-    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace !important;
-    font-size: 14px !important;
-    background-color: #f8f8f8 !important;
-    padding: 1rem !important;
-    border-radius: 8px !important;
-    line-height: 1.5 !important;
-    border: 1px solid #e1e4e8 !important;
-    overflow-x: auto !important;
-}
-
-pre code {
-    background-color: transparent !important;
-    padding: 0 !important;
-    color: #24292e !important;
-}
-
-/* Lists */
-ul, ol {
-    font-size: 18px !important;
-    line-height: 1.6 !important;
-    margin: 1rem 0 !important;
-    padding-left: 1.5rem !important;
-}
-
-li {
-    margin: 0.3rem 0 !important;
-}
-
-/* Links */
-a {
-    color: #0969da !important;
-    text-decoration: none !important;
-    border-bottom: 1px solid transparent !important;
-    transition: border-bottom-color 0.2s ease !important;
-}
-
-a:hover {
-    border-bottom-color: #0969da !important;
-}
-
-/* Blockquotes */
-blockquote {
-    font-size: 18px !important;
-    line-height: 1.6 !important;
-    margin: 1.5rem 0 !important;
-    padding: 1rem 1.5rem !important;
-    border-left: 4px solid #d0d7de !important;
-    background-color: #f6f8fa !important;
-    font-style: italic !important;
-}
-
-/* Tables */
-table {
-    font-size: 16px !important;
-    border-collapse: collapse !important;
-    width: 100% !important;
-    margin: 1.5rem 0 !important;
-}
-
-th, td {
-    border: 1px solid #d0d7de !important;
-    padding: 8px 12px !important;
-    text-align: left !important;
-}
-
-th {
-    background-color: #f6f8fa !important;
+    font-size: 0.875rem !important;
     font-weight: 600 !important;
+    line-height: 1.4 !important;
 }
 
-/* Navigation and UI elements */
-.navbar,
-.nav-link,
-.btn {
-    font-family: 'Inter', sans-serif !important;
+/* Code font family - Roboto Mono */
+code, pre {
+    font-family: 'Roboto Mono', 'SF Mono', Monaco, Consolas, monospace !important;
 }
 
-/* Footer */
-.site-footer {
-    font-family: 'Inter', sans-serif !important;
+/* Lists font size */
+ul, ol {
+    font-size: 16px !important;
 }
 
-/* Homepage content */
-.home-section,
-.widget-page {
-    font-family: 'Inter', sans-serif !important;
+/* Table font size */
+table {
+    font-size: 15px !important;
 }
 
-/* Special classes for emphasis */
-.lead {
-    font-size: 22px !important;
+/* Navigation elements */
+.navbar-brand,
+.navbar-nav .nav-link {
     font-weight: 400 !important;
-    line-height: 1.6 !important;
-    color: #24292f !important;
 }
 
-.article-metadata {
+/* Slightly smaller text for metadata */
+.article-metadata,
+.page-metadata {
     font-size: 14px !important;
-    color: #656d76 !important;
 }
 
-/* Math equations */
-.MathJax {
-    font-size: 17px !important;
+.toc, #TableOfContents, .table-of-contents {
+    display: block !important;
+    visibility: visible !important;
+    position: fixed !important;
+    top: 120px !important;
+    right: 30px !important;
+    width: 280px !important;
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+    z-index: 1000 !important;
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .article-container,
-    .docs-article-container,
-    .page-body {
-        font-size: 16px !important;
-    }
-
-    h1, .article-title {
-        font-size: 2rem !important;
-    }
-
-    h2 {
-        font-size: 1.5rem !important;
-    }
-
-    h3 {
-        font-size: 1.25rem !important;
+@media (max-width: 1200px) {
+    .toc, #TableOfContents, .table-of-contents {
+        position: relative !important;
+        top: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        margin: 0 auto 30px auto !important;
     }
 }

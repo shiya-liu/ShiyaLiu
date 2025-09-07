@@ -1,5 +1,5 @@
 ---
-title: IPEDS data download
+title: IPEDS Data Download
 author: Shiya Liu
 date: '2023-04-18'
 slug: ipeds-data-download
@@ -19,6 +19,8 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+active: false
+draft: true
 ---
 
 *Note*:

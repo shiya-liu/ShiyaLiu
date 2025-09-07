@@ -1,0 +1,153 @@
+<!-- layouts/shortcodes/auto-sidebar.html -->
+{{ $headings := findRE "<h[2-4][^>]*>.*?</h[2-4]>" .Page.Content }}
+{{ $wordCount := .Page.WordCount }}
+{{ $readingTime := .Page.ReadingTime }}
+
+<div class="hugo-auto-sidebar">
+    <div class="sidebar-section">
+        <h4>Contents</h4>
+        <div class="toc-links">
+            {{ range $index, $heading := $headings }}
+                {{ $level := substr $heading 2 1 }}
+                {{ $text := replaceRE "<[^>]+>" "" $heading | replaceRE "\\s+" " " | strings.TrimSpace }}
+                {{ $id := $text | urlize }}
+                <a href="#{{ $id }}" class="toc-link level-h{{ $level }}">
+                    {{ $text }}
+                </a>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="sidebar-section">
+        <h4>Post Info</h4>
+        <div class="post-meta">
+            <div class="meta-item">
+                <span class="meta-label">Reading time:</span>
+                <span class="meta-value">{{ $readingTime }} min</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Word count:</span>
+                <span class="meta-value">{{ $wordCount | lang.NumFmt 0 }}</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Published:</span>
+                <span class="meta-value">{{ .Page.Date.Format "Jan 2006" }}</span>
+            </div>
+        </div>
+    </div>
+
+    {{ with .Page.Params.tags }}
+    <div class="sidebar-section">
+        <h4>Tags</h4>
+        <div class="tag-list">
+            {{ range . }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+<style>
+.hugo-auto-sidebar {
+    float: right;
+    width: 280px;
+    margin: 0 0 30px 30px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.sidebar-section h4 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2b2b2b;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 6px;
+}
+
+.toc-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.toc-link {
+    color: #34495e;
+    text-decoration: none;
+    padding: 6px 0 6px 12px;
+    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    font-size: 13px;
+    border-radius: 0 4px 4px 0;
+}
+
+.toc-link.level-h3 { padding-left: 24px; font-size: 12px; }
+.toc-link.level-h4 { padding-left: 36px; font-size: 12px; color: #6c757d; }
+
+.toc-link:hover {
+    color: #284f7a;
+    border-left-color: #284f7a;
+    background-color: #f8f9fa;
+}
+
+.post-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meta-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 4px 0;
+}
+
+.meta-label {
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.meta-value {
+    color: #284f7a;
+    font-weight: 600;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.tag {
+    background: #f8f9fa;
+    color: #495057;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 500;
+    border: 1px solid #e9ecef;
+}
+
+@media (max-width: 992px) {
+    .hugo-auto-sidebar {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px 0;
+        position: relative;
+        top: 0;
+    }
+}
+</style>
