@@ -29,6 +29,7 @@ tags: [RStudio]
 # Is this a featured talk? (true/false)
 featured: false
 
+---
 
 image:
   caption: ![](/images/MWERA.jpg)
