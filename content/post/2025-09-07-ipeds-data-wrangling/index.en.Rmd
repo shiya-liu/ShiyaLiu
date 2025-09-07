@@ -13,7 +13,7 @@ subtitle: ''
 summary: 'IPEDS data wrangling'
 authors: []
 featured: no
-active: yes
+active: true
 image:
   caption: ''
   focal_point: ''
