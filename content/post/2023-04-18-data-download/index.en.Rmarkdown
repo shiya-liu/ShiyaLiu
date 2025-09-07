@@ -21,8 +21,13 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
+output:
+  blogdown::html_page:
+    toc: false
+    toc_depth: 3
 
 ---
+
 {{< toc >}}
 
 *Note* : 
@@ -61,7 +66,7 @@ If you can download files as a whole, you might want do that instead of download
 
 With those data files, we need to extract them before importing them into R.
 
-### 👉 Tips
+### Tips
 
 1.  Make sure that you check and understand the variables' [definitions](https://surveys.nces.ed.gov/ipeds/public/glossary) before you use them.
 2.  Make sure that you explore all relevant variables that you want. Some variables have similar names but different definitions.
