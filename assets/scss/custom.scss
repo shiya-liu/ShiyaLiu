@@ -277,30 +277,110 @@ table {
     font-size: 14px !important;
 }
 
-.toc, #TableOfContents, .table-of-contents {
+// Force TOC to show and style like Matteo's website
+#TOC {
     display: block !important;
     visibility: visible !important;
+    opacity: 1 !important;
     position: fixed !important;
     top: 120px !important;
     right: 30px !important;
     width: 280px !important;
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
     background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
     border: 1px solid rgba(0, 0, 0, 0.08) !important;
     border-radius: 8px !important;
     padding: 20px !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
     z-index: 1000 !important;
-    max-height: calc(100vh - 200px) !important;
-    overflow-y: auto !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+
+    ul {
+        list-style: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        // Nested lists (subsections)
+        ul {
+            margin-left: 15px !important;
+            font-size: 13px !important;
+
+            a {
+                color: #6c757d !important;
+            }
+
+            // Third level nesting
+            ul {
+                margin-left: 30px !important;
+                font-size: 12px !important;
+            }
+        }
+    }
+
+    li {
+        margin: 6px 0 !important;
+        padding: 0 !important;
+    }
+
+    a {
+        color: #34495e !important;
+        text-decoration: none !important;
+        padding: 4px 0 !important;
+        display: block !important;
+        transition: color 0.2s ease !important;
+        border: none !important;
+        background: transparent !important;
+
+        &:hover {
+            color: #284f7a !important;
+            font-weight: 500 !important;
+        }
+
+        &:focus {
+            outline: none !important;
+            color: #284f7a !important;
+        }
+    }
 }
 
+// Override any theme styles that might hide TOC
+.article-container #TOC,
+.post-content #TOC,
+.content #TOC,
+main #TOC {
+    display: block !important;
+    visibility: visible !important;
+}
+
+// Responsive design
 @media (max-width: 1200px) {
-    .toc, #TableOfContents, .table-of-contents {
+    #TOC {
         position: relative !important;
         top: 0 !important;
         right: 0 !important;
         width: 100% !important;
+        max-width: 400px !important;
         margin: 0 auto 30px auto !important;
+        max-height: none !important;
+        overflow-y: visible !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #TOC {
+        margin-bottom: 20px !important;
+        padding: 15px !important;
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #TOC {
+        display: none !important;
     }
 }
 

@@ -54,6 +54,7 @@ imaging:
 timeout: 600000
 params:
   toc: true
+  custom_scss: true
 taxonomies:
   tag: tags
   category: categories
@@ -77,6 +78,8 @@ related:
       weight: 100
     - name: categories
       weight: 70
+build:
+  writeStats: true
 security:
   _merge: deep
 sitemap:
