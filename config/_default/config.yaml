@@ -52,7 +52,7 @@ imaging:
   quality: 75
   anchor: smart
 timeout: 600000
-param:
+params:
   toc: true
 taxonomies:
   tag: tags
@@ -61,8 +61,11 @@ taxonomies:
   author: authors
 markup:
   _merge: deep
+  goldmark:
+    renderer:
+      unsafe: true
   tableOfContents:
-    startLevel: 2
+    startLevel: 1
     endLevel: 4
     ordered: false
 related:

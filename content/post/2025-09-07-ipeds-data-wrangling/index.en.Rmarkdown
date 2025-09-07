@@ -19,14 +19,10 @@ image:
   focal_point: ''
   preview_only: no
 projects: []
-toc: true
-toc_depth: 3
-toc_float: true
-show_toc: true
-markup: 
-  tableOfContents:
-    startLevel: 2
-    endLevel: 4
+output:
+  blogdown::html_page:
+    toc: true
+    toc_depth: 3
 ---
 
 

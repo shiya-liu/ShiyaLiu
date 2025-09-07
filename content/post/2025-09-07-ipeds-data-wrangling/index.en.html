@@ -1,0 +1,52 @@
+
+<div id="TOC">
+<ul>
+<li><a href="#import-multiple-files-into-r" id="toc-import-multiple-files-into-r">Import multiple files into R</a></li>
+<li><a href="#clean-variable-names" id="toc-clean-variable-names">Clean variable names</a>
+<ul>
+<li><a href="#drop-certain-patterns-in-variable-names" id="toc-drop-certain-patterns-in-variable-names">Drop certain patterns in variable names</a></li>
+</ul></li>
+<li><a href="#join-all-data-into-one-dataframe" id="toc-join-all-data-into-one-dataframe">Join all data into one dataframe</a></li>
+</ul>
+</div>
+
+<div id="import-multiple-files-into-r" class="section level2">
+<h2>Import multiple files into R</h2>
+<pre class="r"><code>df &lt;- list.files(&quot;file_path&quot;, pattern = &quot;*.csv&quot;,
+                 full.names = T) |&gt;
+  lapply(read_csv)</code></pre>
+</div>
+<div id="clean-variable-names" class="section level2">
+<h2>Clean variable names</h2>
+<div id="drop-certain-patterns-in-variable-names" class="section level3">
+<h3>Drop certain patterns in variable names</h3>
+<ul>
+<li>For example, drop “F1617_F1A_RV.” in front of “F1617_F1A_RV.State appropriations”</li>
+</ul>
+<pre class="r"><code>replacements &lt;- c(&quot; - &quot; = &quot;_&quot;,
+                  &quot; &quot; = &quot;_&quot;,
+                  &quot;-&quot; = &quot;_&quot;,
+                  &quot;/&quot; = &quot;_&quot;,
+                  &quot;,&quot; = &quot;&quot;)
+for (i in 1:7) {
+  df[[i]] &lt;- df[[i]] |&gt;
+    setNames(gsub(
+      pattern = &quot;.*F1A.|.*RV.|.*[0-9]\\.|,.*|:.*&quot;,
+      replacement = &quot;&quot;,
+      x = names(df[[i]])
+      )
+      ) |&gt;
+    rename_all(~ str_replace_all(.x, replacements)) |&gt;
+    rename_with(~ str_remove(., &quot;_\\d{4}(_\\d{2})?$&quot;)) |&gt; # remove certain number at the end of variable names
+    janitor::clean_names() |&gt; # create clean name automatically, e.g., to lower case, replace space with &quot;_&quot;
+    rename(
+      new_name = old_name
+    ) 
+} </code></pre>
+</div>
+</div>
+<div id="join-all-data-into-one-dataframe" class="section level2">
+<h2>Join all data into one dataframe</h2>
+<pre class="r"><code>df &lt;- df |&gt;
+  reduce(full_join)</code></pre>
+</div>
