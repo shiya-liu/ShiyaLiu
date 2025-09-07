@@ -14,7 +14,7 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Ph.D. student
+role: Research Analyst
 
 # Organizations/Affiliations to show in About widget
 organizations:
@@ -26,6 +26,7 @@ bio:
 
 # Interests to show in About widget
 interests:
+    - Student Success
     - Educational Finance
     - Educational Policy
     - Education Equity
@@ -68,5 +69,5 @@ email: ''
 highlight_name: true
 ---
 
-I am currently a PhD student at Ohio University. My research interests include educational finance, educational policy, and education equity. 
+I am currently a Research Analyst at Ohio University's Institutional Effectiveness and Analytics. My research interests include student success, educational finance, educational policy, and education equity. 
 {style="text-align: justify;"}
